@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="892.0" prefWidth="1041.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentregisterapplication.EditStudentInfoViewController">
+   <children>
+      <VBox prefHeight="615.0" prefWidth="199.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="55.0" prefWidth="223.0" style="-fx-border-color: GREY;" text="Opiskelija ID: " />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="55.0" prefWidth="223.0" style="-fx-border-color: GREY;" text="Etunimi: " />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="65.0" prefHeight="55.0" prefWidth="223.0" style="-fx-border-color: GREY;" text="Sukunimi: " />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="120.0" prefHeight="55.0" prefWidth="223.0" style="-fx-border-color: GREY;" text="Lahiosoite: " />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="175.0" prefHeight="55.0" prefWidth="223.0" style="-fx-border-color: GREY;" text="Postitoimipaikka: " />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="230.0" prefHeight="55.0" prefWidth="223.0" style="-fx-border-color: GREY;" text="Postinumero: " />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="285.0" prefHeight="55.0" prefWidth="223.0" style="-fx-border-color: GREY;" text="Sahkopostiosoite: " />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="285.0" prefHeight="55.0" prefWidth="223.0" style="-fx-border-color: GREY;" text="Puhelinnumero: " />
+            <HBox prefHeight="64.0" prefWidth="137.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#toolFirstClicked" prefHeight="64.0" prefWidth="42.0" text="&lt;&lt;">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#toolPrevClicked" prefHeight="64.0" prefWidth="31.0" text="&lt;">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="51.0" layoutY="10.0" mnemonicParsing="false" onAction="#toolNextClicked" prefHeight="64.0" prefWidth="31.0" text="&gt;">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="83.0" layoutY="10.0" mnemonicParsing="false" onAction="#toolLastClicked" prefHeight="64.0" prefWidth="37.0" text="&gt;&gt;">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Label fx:id="txtOpiskelijatiedotPaivitetty" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="395.0" prefHeight="37.0" prefWidth="137.0" text="Opiskelija paivitetty!" visible="false" />
+            <Separator prefHeight="128.0" prefWidth="137.0" />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="137.0" style="-fx-border-color: GREY;" text="Opiskelija ID: " />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="680.0" prefHeight="34.0" prefWidth="137.0" style="-fx-border-color: GREY;" text="Kurssi ID: " />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="709.0" prefHeight="29.0" prefWidth="137.0" style="-fx-border-color: GREY;" text="Arvosana: " />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="738.0" prefHeight="32.0" prefWidth="137.0" style="-fx-border-color: GREY;" text="Suorituspaiva: " />
+            <Label fx:id="txtSuoritusPaivitetty" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="839.0" prefHeight="32.0" prefWidth="137.0" text="Suoritus paivitetty! " visible="false" />
+            <Label fx:id="txtSuoritusLisatty" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="775.0" prefHeight="32.0" prefWidth="137.0" text="Suoritus lisatty! " visible="false" />
+            <Label fx:id="txtSuoritusPoistettu" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="807.0" prefHeight="32.0" prefWidth="137.0" text="Suoritus poistettu! " visible="false" />
+         </children>
+      </VBox>
+      <VBox prefHeight="615.0" prefWidth="966.0">
+         <children>
+            <TextField fx:id="txtMuokkaaOpiskelijaID" prefHeight="55.0" prefWidth="904.0" />
+            <TextField fx:id="txtMuokkaaEtunimi" layoutX="10.0" layoutY="10.0" prefHeight="55.0" prefWidth="904.0" />
+            <TextField fx:id="txtMuokkaaSukunimi" layoutX="10.0" layoutY="10.0" prefHeight="55.0" prefWidth="904.0" />
+            <TextField fx:id="txtMuokkaaLahiosoite" layoutX="10.0" layoutY="65.0" prefHeight="55.0" prefWidth="904.0" />
+            <TextField fx:id="txtMuokkaaPostitoimipaikka" layoutX="10.0" layoutY="120.0" prefHeight="55.0" prefWidth="904.0" />
+            <TextField fx:id="txtMuokkaaPostinumero" layoutX="10.0" layoutY="175.0" prefHeight="55.0" prefWidth="904.0" />
+            <TextField fx:id="txtMuokkaaSahkoposti" layoutX="10.0" layoutY="175.0" prefHeight="55.0" prefWidth="904.0" />
+            <TextField fx:id="txtMuokkaaPuhelinnumero" layoutX="10.0" layoutY="230.0" prefHeight="55.0" prefWidth="904.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#btnPaivitaOpiskelijaTiedot" prefHeight="63.0" prefWidth="904.0" text="Paivita opiskelijan tiedot" />
+            <HBox prefHeight="169.0" prefWidth="904.0">
+               <children>
+                  <TableView fx:id="tblViewCourse" prefHeight="169.0" prefWidth="714.0">
+                    <columns>
+                      <TableColumn fx:id="courseIDColumn" prefWidth="88.0" text="Kurssi ID" />
+                        <TableColumn fx:id="courseNameColumn" prefWidth="181.0" text="Nimi" />
+                        <TableColumn fx:id="courseScopeColumn" prefWidth="123.0" text="Opintopisteet" />
+                        <TableColumn fx:id="courseDescriptionColumn" prefWidth="321.0" text="Kuvaus" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="tblViewCompletion" layoutX="10.0" layoutY="10.0" prefHeight="169.0" prefWidth="244.0">
+                     <columns>
+                        <TableColumn fx:id="completionGradeColumn" prefWidth="75.0" text="Arvosana" />
+                        <TableColumn fx:id="completionDateColumn" prefWidth="114.0" text="Suorituspvm" />
+                     </columns>
+                  </TableView>
+               </children>
+            </HBox>
+            <TextField fx:id="txtSuoritusOpiskelijaID" layoutX="10.0" layoutY="395.0" prefHeight="25.0" prefWidth="904.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="txtSuoritusKurssiID" layoutX="10.0" layoutY="681.0" prefHeight="25.0" prefWidth="904.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <TextField fx:id="txtSuoritusArvosana" layoutX="10.0" layoutY="681.0" prefHeight="25.0" prefWidth="904.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <DatePicker fx:id="txtSuoritusDate" prefHeight="31.0" prefWidth="904.0" />
+            <Button layoutX="10.0" layoutY="837.0" mnemonicParsing="false" onAction="#btnPaivitaSuoritus" prefHeight="31.0" prefWidth="910.0" text="Paivita suorituksen tiedot" />
+            <Button mnemonicParsing="false" onAction="#btnLisaaUusiSuoritus" prefHeight="31.0" prefWidth="910.0" text="Lisaa uusi suoritus" />
+            <Button layoutX="10.0" layoutY="805.0" mnemonicParsing="false" onAction="#btnPoistaSuoritus" prefHeight="31.0" prefWidth="910.0" text="Poista suoritus" />
+         </children>
+      </VBox>
+   </children>
+</HBox>
